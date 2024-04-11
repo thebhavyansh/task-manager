@@ -10,7 +10,7 @@ Task Manager is a web application for managing tasks. It includes features for u
 - [Features](#features)
 - [Contributing](#contributing)
 - [License](#license)
-
+-[Endpoints](#endpoints)
 ## Introduction
 
 Task Manager allows users to create, edit, and delete tasks. Users can sign up for an account and sign in to manage their tasks.
@@ -38,11 +38,10 @@ Task Manager allows users to create, edit, and delete tasks. Users can sign up f
   - Create new tasks.
   - Edit existing tasks.
   - Delete tasks when no longer needed. 
-
-## Contributing
-
-Contributions are welcome! Please fork this repository and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## EndPoints
+**Task Creation:** POST `[https://localhost:3000/task]`
+**Task Retrieval:** GET `[https://localhost:3000/task/:id]`
+**Task Update:** PUT `[https://localhost:3000/task/:id]`
+**Task Deletion:** DELETE `[https://localhost:3000/task/:id]`
+**User Signup:** POST `[https://localhost:3000/auth/signup]`
+**User Signin:** POST `[https://localhost:3000/auth/signin]`
