@@ -45,4 +45,5 @@ Task Manager allows users to create, edit, and delete tasks. Users can sign up f
 **Task Deletion:** DELETE `[https://localhost:3000/task/:id]`.
 **User Signup:** POST `[https://localhost:3000/auth/signup]`.
 **User Signin:** POST `[https://localhost:3000/auth/signin]`.
-**User Details Update:** PUT `[https://localhost:3000/users/signin]`.
+**User Details Update:** PUT `[https://localhost:3000/users/]`.
+**user Deletion:** DELETE `[https://localhost:3000/users/]`.
