@@ -10,7 +10,7 @@ Task Manager is a web application for managing tasks. It includes features for u
 - [Features](#features)
 - [Contributing](#contributing)
 - [License](#license)
--[Endpoints](#endpoints)
+- [Endpoints](#endpoints)
 ## Introduction
 
 Task Manager allows users to create, edit, and delete tasks. Users can sign up for an account and sign in to manage their tasks.
