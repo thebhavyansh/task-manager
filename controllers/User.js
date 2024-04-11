@@ -22,26 +22,25 @@ router.put('/', verifyToken, async (req, res) => {
         res.status(500).json({ error: "Error updating user" });
     }
 });
-
-router.delete('/', verifyToken, async (req, res) => {
+router.delete('/', verifyToken,async (req, res) => {
     const userId = req.user.id;
     console.log(userId)
 
     try {
         await db.promise().beginTransaction();
 
-        await db.promise().query('DELETE FROM tasks WHERE user_id = ?', [userId]);
+        await db.promise().query('DELETE FROM blogs WHERE user_id = ?', [userId]);
 
         await db.promise().query('DELETE FROM users WHERE id = ?', [userId]);
 
         await db.promise().commit();
 
-        res.json({ message: "User and associated task posts deleted successfully" });
+        res.json({ message: "User and associated tasks posts deleted successfully" });
     } catch (error) {
         await db.promise().rollback();
 
-        console.error("Error deleting user and associated task posts:", error);
-        res.status(500).json({ error: "Error deleting user and associated task posts" });
+        console.error("Error deleting user and associated tasks:", error);
+        res.status(500).json({ error: "Error deleting user and associated tasks " });
     }
 });
 
